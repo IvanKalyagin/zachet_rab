@@ -1,9 +1,8 @@
 <h1>GameWords#input</h1>
 <p>Find me in app/views/game_words/input.html.erb</p>
-<p> <%= @text_game %> </p>
-<%= form_with url: result_path do |form| %>
- <%= form.label("Input n:") %>
- <%= form.text_field(:n_s) %> <br/>
- <br/><%= form.submit("Enter", id: 'button-clck') %>
-<% end %> 
+<div id='start-container'>
+  <%= form_with url: start_game_path do |form| %>
+  <%= form.submit("Begin", id: 'begin-button') %>
+  <% end %> 
+</div>
 <div id='result-container'></div>

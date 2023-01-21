@@ -1,0 +1,6 @@
+<p> <%= @text_game %> </p>
+<%= form_with url: result_path do |form| %>
+ <%= form.label("Input n:") %>
+ <%= form.text_field(:n_s) %> <br/>
+ <br/><%= form.submit("Enter", id: 'button-clck') %>
+<% end %> 
