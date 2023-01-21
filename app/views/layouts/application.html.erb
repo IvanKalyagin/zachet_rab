@@ -12,7 +12,7 @@
 
   <header>
   <%= link_to "Home", root_path%>
-    <%= link_to "Game", static_pages_dashboard_path%>
+    <%= link_to "Game", dashboard_path%>
     <% if current_user %>
       <%= current_user.email %>
       <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
