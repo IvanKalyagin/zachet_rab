@@ -61,26 +61,71 @@ class GameWordsController < ApplicationController
     @text_game = @@text_globe
     input_text = params[:n_s]
     @k = 0
+    @wpm = 0
     @res = ''
-    if input_text != nil then
-      @time_end = Time.now
-      @del_time = @time_end - @@time_start
-      @inp_l = input_text.length
-      length_origin = @text_game.length
-      length_input = input_text.length
-      if length_input == length_origin then
-        (0..length_input).each { |i|
-          if @text_game[i] == input_text[i] then
-            @k += 1
-          end
-        }
-        @wpm = (@k/@del_time * 60).round
-        @res = 'Complete'
+    if @@game_mode == 1 then
+      if input_text != nil then
+        @time_end = Time.now
+        @del_time = @time_end - @@time_start
+        @inp_l = input_text.length
+        length_origin = @text_game.length
+        length_input = input_text.length
+        if length_input == length_origin then
+          (0..length_input).each { |i|
+            if @text_game[i] == input_text[i] then
+              @k += 1
+            end
+          }
+          @wpm = (@k/@del_time * 60).round
+          @res = 'Complete'
+        else
+          @res = 'Length does not same'
+        end
       else
-        @res = 'Length does not same'
+        @res = 'Input values'
       end
-    else
-      @res = 'Input values'
+    elsif @@game_mode == 2 then
+      if input_text != nil then
+        @time_end = Time.now
+        @del_time = @time_end - @@time_start
+        @inp_l = input_text.length
+        length_origin = @text_game.length
+        length_input = input_text.length
+        if length_input == length_origin then
+          (0..length_input).each { |i|
+            if @text_game[i] == input_text[i] then
+              @k += 1
+            end
+          }
+          @wpm = (@k/@del_time * 60).round
+          @res = 'Complete'
+        else
+          @res = 'Length does not same'
+        end
+      else
+        @res = 'Input values'
+      end
+    elsif @@game_mode == 3 then
+      if input_text != nil then
+        @time_end = Time.now
+        @del_time = @time_end - @@time_start
+        @inp_l = input_text.length
+        length_origin = @text_game.length
+        length_input = input_text.length
+        if length_input == length_origin then
+          (0..length_input).each { |i|
+            if @text_game[i] == input_text[i] then
+              @k += 1
+            end
+          }
+          @wpm = (@k/@del_time * 60).round
+          @res = 'Complete'
+        else
+          @res = 'Length does not same'
+        end
+      else
+        @res = 'Input values'
+      end
     end
   end
 

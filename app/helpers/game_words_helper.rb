@@ -26,7 +26,7 @@ module GameWordsHelper
   @@predl_eng = ['That we can call these delicate creatures ours, And not their appetites!',
     "But then begins a journey in my head to work my mind when body's work's expired",
     "What immortal hand or eye could frame thy fearful symmetry?",
-    'He has many subjects to go to each school day: English, art, mathematics, gym, and history.',
+    'He has many subjects to go to each school day: English, art, mathematics, gym and history.',
     "Most people don't think about numerical representations of quantity, but they play a big part in life.",
     'Christmas is widely celebrated and enjoyed across the United States and the world.',
     'For those to whom much is given, much is required. It is the famous quote from Bible',
@@ -37,12 +37,12 @@ module GameWordsHelper
   @@predl_rus = ['Что мы можем назвать этих нежных созданий своими, А не их аппетитами!',
     'Но затем начинается путешествие в моей голове, чтобы работать над своим разумом, когда срок работы тела истек',
     'Какая бессмертная рука или глаз могли бы обрамить вашу устрашающую симметрию?',
-    'Каждый школьный день у него много предметов: английский язык, искусство, математика, гимнастика и история'.
-    'Большинство людей не думают о численном представлении количества, но они играют большую роль в жизни'.
+    'Каждый школьный день у него много предметов: английский язык, искусство, математика, гимнастика и история',
+    'Большинство людей не думают о численном представлении количества, но они играют большую роль в жизни',
     'Рождество широко празднуется и празднуется в Соединенных Штатах и ​​во всем мире.',
     'От того, кому много дано, много и требуется. Это известная цитата из Библии',
-    'Он усвоил самый тяжелый урок в своей жизни, и в доказательство этого у него были шрамы, как физические, так и душевные'.
+    'Он усвоил самый тяжелый урок в своей жизни, и в доказательство этого у него были шрамы, как физические, так и душевные',
     'В галерее было много картин с обезьянами, размахивающими бамбуковыми палками.',
-    'Люди обычно одобряют собак, которые едят кошачий корм, но не кошек, которые едят собачий корм'.
+    'Люди обычно одобряют собак, которые едят кошачий корм, но не кошек, которые едят собачий корм'
   ]
 end
