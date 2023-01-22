@@ -73,3 +73,6 @@ group :test do
 end
 
 gem 'devise'
+gem 'timers'
+gem 'chartkick'
+gem 'countdown', github: 'jnbt/countdown'

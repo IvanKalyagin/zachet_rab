@@ -1,0 +1,2 @@
+class ActionTime < ApplicationRecord
+end

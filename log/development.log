@@ -9595,3 +9595,356 @@ Processing by GameWordsController#result as TURBO_STREAM
 Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 2051)
 
 
+Started GET "/dashboard" for ::1 at 2023-01-22 18:56:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2011)
+  Rendered layout layouts/application.html.erb (Duration: 947.4ms | Allocations: 148690)
+Completed 200 OK in 1006ms (Views: 951.8ms | ActiveRecord: 1.2ms | Allocations: 179608)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 18:56:18 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"Text", "commit"=>"Begin"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 44.9ms | Allocations: 24758)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 47.9ms | Allocations: 25587)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms | Allocations: 28011)
+
+
+  
+ActionView::Template::Error (Asset `countdown.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link countdown.js
+
+and restart your server):
+    1: <%= javascript_include_tag 'countdown' %>
+    2: <% if @start_mes != 'You should choose game mod' then%>
+    3:   <p class="noselect"> <%= @text_game %> </p>
+    4:   <%= form_with url: result_path do |form| %>
+  
+app/views/game_words/_start_message.html.erb:1
+app/views/game_words/start_game.turbo_stream.erb:1
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:25 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 1.7ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3629)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5609)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 18:57:30 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"Text", "commit"=>"Begin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 48.1ms | Allocations: 25514)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 48.5ms | Allocations: 25603)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.2ms | Allocations: 27440)
+
+
+  
+ActionView::Template::Error (Asset `countdown.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link countdown.js
+
+and restart your server):
+    1: <%= javascript_include_tag 'countdown' %>
+    2: <% if @start_mes != 'You should choose game mod' then%>
+    3:   <p class="noselect"> <%= @text_game %> </p>
+    4:   <%= form_with url: result_path do |form| %>
+  
+app/views/game_words/_start_message.html.erb:1
+app/views/game_words/start_game.turbo_stream.erb:1
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:37 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 2.4ms | Allocations: 926)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3445)
+Completed 200 OK in 17ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 5202)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2011)
+  Rendered layout layouts/application.html.erb (Duration: 88.0ms | Allocations: 43326)
+Completed 200 OK in 146ms (Views: 92.8ms | ActiveRecord: 1.6ms | Allocations: 74243)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:54 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 1.5ms | Allocations: 998)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3619)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 5642)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:55 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 1.5ms | Allocations: 928)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3429)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5191)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:56 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 1.7ms | Allocations: 928)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3429)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 5197)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:56 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 3.0ms | Allocations: 930)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3451)
+Completed 200 OK in 39ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 5218)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 18:57:57 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 2.1ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3427)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 5186)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 18:58:00 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"Sentence", "commit"=>"Begin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 44.0ms | Allocations: 23688)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 46.8ms | Allocations: 24515)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.2ms | Allocations: 26921)
+
+
+  
+ActionView::Template::Error (Asset `countdown.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link countdown.js
+
+and restart your server):
+    1: <%= javascript_include_tag 'countdown' %>
+    2: <% if @start_mes != 'You should choose game mod' then%>
+    3:   <p class="noselect"> <%= @text_game %> </p>
+    4:   <%= form_with url: result_path do |form| %>
+  
+app/views/game_words/_start_message.html.erb:1
+app/views/game_words/start_game.turbo_stream.erb:1
+Started GET "/dashboard" for ::1 at 2023-01-22 18:58:42 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4529)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 0.2ms | Allocations: 7265)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 18:58:44 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"Sentence", "commit"=>"Begin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 14.4ms | Allocations: 8913)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 16.2ms | Allocations: 9191)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms | Allocations: 11452)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+    4:     <%= form.text_field(:n_s) %> <br/>
+    5:     <br/><%= form.submit("Enter", id: 'button-clck') %>
+    6:   <% end %> 
+    7:    <%= countup 1.minute, step: :seconds %>
+    8: <%else%>
+    9:   <%= @start_mes%>
+   10:   <%= link_to "Repeat", dashboard_path%>
+  
+app/views/game_words/_start_message.html.erb:7
+app/views/game_words/start_game.turbo_stream.erb:1
+Started GET "/dashboard" for ::1 at 2023-01-22 18:58:56 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 2.7ms | Allocations: 953)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3590)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 5550)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 18:59:31 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"Sentence", "commit"=>"Begin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 8.1ms | Allocations: 3453)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 9.6ms | Allocations: 3810)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 6544)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for 2023-01-23 22:59:31.512286746 +0300:Time):
+    4:     <%= form.text_field(:n_s) %> <br/>
+    5:     <br/><%= form.submit("Enter", id: 'button-clck') %>
+    6:   <% end %> 
+    7:     <%= countdown Time.now + 28.hours %>
+    8: <%else%>
+    9:   <%= @start_mes%>
+   10:   <%= link_to "Repeat", dashboard_path%>
+  
+app/views/game_words/_start_message.html.erb:7
+app/views/game_words/start_game.turbo_stream.erb:1
+Started GET "/dashboard" for ::1 at 2023-01-22 19:00:03 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1338)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4528)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 7261)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 19:00:04 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"Sentence", "commit"=>"Begin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 2.3ms | Allocations: 1205)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 4.9ms | Allocations: 1548)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 3804)
+
+
+Started POST "/result" for ::1 at 2023-01-22 19:00:06 +0300
+Processing by GameWordsController#result as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "n_s"=>"", "commit"=>"Enter"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/result.turbo_stream.erb
+  Rendered game_words/_result_message.html.erb (Duration: 1.2ms | Allocations: 351)
+  Rendered game_words/result.turbo_stream.erb (Duration: 3.2ms | Allocations: 680)
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 2585)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 19:00:07 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 2.2ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3425)
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 5181)
+
+
+Started POST "/start_game" for ::1 at 2023-01-22 19:00:09 +0300
+Processing by GameWordsController#start_game as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "lang"=>"English", "dl"=>"60_sec", "commit"=>"Begin"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/start_game.turbo_stream.erb
+  Rendered game_words/_start_message.html.erb (Duration: 1.4ms | Allocations: 939)
+  Rendered game_words/start_game.turbo_stream.erb (Duration: 1.9ms | Allocations: 1089)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 3087)
+
+
+Started POST "/result" for ::1 at 2023-01-22 19:00:10 +0300
+Processing by GameWordsController#result as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "n_s"=>"", "commit"=>"Enter"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering game_words/result.turbo_stream.erb
+  Rendered game_words/_result_message.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered game_words/result.turbo_stream.erb (Duration: 0.8ms | Allocations: 208)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2052)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-22 19:00:11 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 1.8ms | Allocations: 926)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3446)
+Completed 200 OK in 17ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 5192)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActionTimes (20230122162025)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "action_times" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "gen_time" float DEFAULT 1000.0, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_action_times_on_id" ON "action_times" ("id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230122162025"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnTimeUsers (20230122162445)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "best_time" varchar DEFAULT '', "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "statistics" integer DEFAULT 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics")
+                     SELECT "id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics" FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "best_time" float DEFAULT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "statistics" integer DEFAULT 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics")
+                     SELECT "id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics" FROM "ausers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "best_time" float DEFAULT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "statistics" integer DEFAULT 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics")
+                     SELECT "id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics" FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "best_time" float DEFAULT 0.0, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "statistics" integer DEFAULT 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics")
+                     SELECT "id","email","encrypted_password","best_time","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","statistics" FROM "ausers"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230122162445"]]
+  [1m[36mTRANSACTION (36.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
