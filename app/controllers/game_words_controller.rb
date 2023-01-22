@@ -79,6 +79,14 @@ class GameWordsController < ApplicationController
           @wpm = (@k/@del_time * 60).round
           @res = 'Complete'
           ActionTime.create(gen_time: @del_time.round(2), user_id: current_user.id) if @wpm != 0
+          @user = User.find(current_user.id)
+          if @user.time_best == 0.0 then
+            @user.time_best = @del_time.round(2)
+            @user.save
+          elsif @user.time_best > @del_time.round(2)
+            @user.time_best = @del_time.round(2)
+            @user.save
+          end
         else
           @res = 'Length does not same'
         end
@@ -101,6 +109,11 @@ class GameWordsController < ApplicationController
           @wpm = (@k/@del_time * 60).round
           @res = 'Complete'
           Action.create(gen_results: @wpm, user_id: current_user.id) if @wpm != 0
+          @user = User.find(current_user.id)
+          if @user.statistics < @wpm  then
+            @user.statistics = @wpm
+            @user.save
+          end
         else
           @res = 'Length does not same'
         end
@@ -123,6 +136,11 @@ class GameWordsController < ApplicationController
           @wpm = (@k/@del_time * 60).round
           @res = 'Complete'
           Action.create(gen_results: @wpm, user_id: current_user.id) if @wpm != 0
+          @user = User.find(current_user.id)
+          if @user.statistics < @wpm  then
+            @user.statistics = @wpm
+            @user.save
+          end
         else
           @res = 'Length does not same'
         end
