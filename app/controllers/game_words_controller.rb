@@ -78,6 +78,7 @@ class GameWordsController < ApplicationController
           }
           @wpm = (@k/@del_time * 60).round
           @res = 'Complete'
+          ActionTime.create(gen_time: @del_time.round(2), user_id: current_user.id) if @wpm != 0
         else
           @res = 'Length does not same'
         end
@@ -99,6 +100,7 @@ class GameWordsController < ApplicationController
           }
           @wpm = (@k/@del_time * 60).round
           @res = 'Complete'
+          Action.create(gen_results: @wpm, user_id: current_user.id) if @wpm != 0
         else
           @res = 'Length does not same'
         end
@@ -120,6 +122,7 @@ class GameWordsController < ApplicationController
           }
           @wpm = (@k/@del_time * 60).round
           @res = 'Complete'
+          Action.create(gen_results: @wpm, user_id: current_user.id) if @wpm != 0
         else
           @res = 'Length does not same'
         end
@@ -130,5 +133,17 @@ class GameWordsController < ApplicationController
   end
 
   def progress
+    @progress = []
+    actions = Action.all
+    actions.each do |action|
+      if action.user_id == current_user.id
+        @progress.push(action.gen_results)
+      end
+    end
+    if @progress.length.zero?
+      0
+    else
+      (@progress.sum / @progress.length).round(2)
+    end
   end
 end
