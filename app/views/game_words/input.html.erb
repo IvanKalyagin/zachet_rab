@@ -2,7 +2,16 @@
 <p>Find me in app/views/game_words/input.html.erb</p>
 <div id='start-container'>
   <%= form_with url: start_game_path do |form| %>
+  <%= form.select :lang, ["English", "Русский"] %> 
+  <input type="radio" id="dl1" name="dl" value="Text" />
+  <label>Text&nbsp&nbsp&nbsp</label>
+  <input type="radio" id="dl2" name="dl" value="60_sec" />
+  <label>60 sec&nbsp&nbsp&nbsp</label>
+  <input type="radio" id="dl3" name="dl" value="Sentence" />
+  <label>Sentence&nbsp&nbsp&nbsp</label>
   <%= form.submit("Begin", id: 'begin-button') %>
   <% end %> 
 </div>
+<div id='start-error'></div>
+<p><%= @time_now %>
 <div id='result-container'></div>

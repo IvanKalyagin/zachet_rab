@@ -1,6 +1,10 @@
-<p> <%= @text_game %> </p>
-<%= form_with url: result_path do |form| %>
- <%= form.label("Input n:") %>
- <%= form.text_field(:n_s) %> <br/>
- <br/><%= form.submit("Enter", id: 'button-clck') %>
-<% end %> 
+<% if @start_mes != 'You should choose game mod' then%>
+  <p class="noselect"> <%= @text_game %> </p>
+  <%= form_with url: result_path do |form| %>
+    <%= form.text_field(:n_s) %> <br/>
+    <br/><%= form.submit("Enter", id: 'button-clck') %>
+  <% end %> 
+<%else%>
+  <%= @start_mes%>
+  <%= link_to "Repeat", dashboard_path%>
+<% end %>
