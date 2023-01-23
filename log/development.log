@@ -18253,3 +18253,239 @@ Processing by GameWordsController#progress as HTML
 Completed 200 OK in 58ms (Views: 32.2ms | ActiveRecord: 2.7ms | Allocations: 40480)
 
 
+Started GET "/" for ::1 at 2023-01-23 21:37:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.6ms | Allocations: 567)
+  Rendered layout layouts/application.html.erb (Duration: 1620.7ms | Allocations: 202461)
+Completed 200 OK in 1627ms (Views: 1622.3ms | ActiveRecord: 0.0ms | Allocations: 208808)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:12 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6870)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 7270)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 21:37:13 +0300
+Processing by GameWordsController#input as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 3009)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 21:37:13 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 997)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4723)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 11178)
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 32722)
+
+
+Started GET "/table_res" for ::1 at 2023-01-23 21:37:14 +0300
+Processing by GameWordsController#table_res as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 643)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 21:37:14 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1279)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 7386)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 8441)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 21:37:17 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 7371)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 8359)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-01-23 21:37:23 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"a@a.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@a.ru"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/table_res
+Completed 302 Found in 238ms (ActiveRecord: 0.3ms | Allocations: 7336)
+
+
+Started GET "/table_res" for ::1 at 2023-01-23 21:37:24 +0300
+Processing by GameWordsController#table_res as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/table_res.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/game_words/table_res.html.erb:16
+  Rendered game_words/table_res.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 7534)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 10126)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 21:37:31 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1612)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7856)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 9858)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:32 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 7441)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 7809)
+
+
+Started GET "/table_res" for ::1 at 2023-01-23 21:37:33 +0300
+Processing by GameWordsController#table_res as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/table_res.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/game_words/table_res.html.erb:16
+  Rendered game_words/table_res.html.erb within layouts/application (Duration: 1.8ms | Allocations: 592)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6715)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 8481)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:34 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 7288)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 7614)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 21:37:35 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 0.6ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 7032)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 8791)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:36 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 7286)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms | Allocations: 7612)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 21:37:36 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 0.9ms | Allocations: 934)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 7028)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 8788)
+
+
+Started GET "/table_res" for ::1 at 2023-01-23 21:37:37 +0300
+Processing by GameWordsController#table_res as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/table_res.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/game_words/table_res.html.erb:16
+  Rendered game_words/table_res.html.erb within layouts/application (Duration: 0.9ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6713)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 8455)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:38 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 7271)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms | Allocations: 7597)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 21:37:39 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 1.0ms | Allocations: 934)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 7028)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 8790)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:40 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7266)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 7592)
+
+
+Started GET "/table_res" for ::1 at 2023-01-23 21:37:40 +0300
+Processing by GameWordsController#table_res as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/table_res.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/game_words/table_res.html.erb:16
+  Rendered game_words/table_res.html.erb within layouts/application (Duration: 1.8ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 6713)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 8454)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 21:37:42 +0300
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 0.6ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 7029)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 8781)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-01-23 21:37:44 +0300
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.1ms | Allocations: 7946)
+
+
+Started GET "/" for ::1 at 2023-01-23 21:37:44 +0300
+Processing by StaticPagesController#landing_page as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6833)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 7208)
+
+
