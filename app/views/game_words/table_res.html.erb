@@ -1,0 +1,30 @@
+<div class="pos">
+  <div class="main_content">
+    <h1 class="cent">Best results 🏆</h1>
+    <div class="col-auto">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>№</th>
+              <th>User</th>
+              <th>Best time</th>
+              <th>Symbols per minute</th>
+              <th>Words per minute</th>
+            </tr>
+            <% list_users = User.all %>
+            <% index = 0 %>
+            <% list_users.length.times do |i| %>
+              <tr>
+                <td><%= index += 1 %></td>
+                <td><%= list_users[i].email %></td>
+                <td><%= list_users[i].time_best %></td>
+                <td><%= list_users[i].statistics %></td>
+                <td><%= (list_users[i].statistics / 6).round %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/landing_page'
   get 'dashboard', to: 'game_words#input'
   get 'progress', to: 'game_words#progress'
+  get 'table_res', to: 'game_words#table_res'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
