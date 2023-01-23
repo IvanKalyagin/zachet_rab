@@ -16213,3 +16213,316 @@ Processing by GameWordsController#input as HTML
 Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 9328)
 
 
+Started GET "/dashboard" for ::1 at 2023-01-23 05:51:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GameWordsController#input as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/input.html.erb within layouts/application
+  Rendered game_words/input.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2088)
+  Rendered layout layouts/application.html.erb (Duration: 123.4ms | Allocations: 55478)
+Completed 200 OK in 304ms (Views: 128.3ms | ActiveRecord: 1.5ms | Allocations: 86966)
+
+
+Started GET "/result_table" for ::1 at 2023-01-23 05:51:35 +0300
+Processing by GameWordsController#result_table as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/result_table.html.erb within layouts/application
+  Rendered game_words/result_table.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2532)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2618)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms | Allocations: 4600)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f314470ce08>::Users):
+    11:               <th>Symbols per minute</th>
+    12:               <th>Best time</th>
+    13:             </tr>
+    14:             <% list_users = Users.all %>
+    15:             <% index = 0 %>
+    16:             <% list_users.length.times do |i| %>
+    17:               <tr>
+  
+app/views/game_words/result_table.html.erb:14
+Started GET "/result_table" for ::1 at 2023-01-23 05:52:16 +0300
+Processing by GameWordsController#result_table as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering game_words/result_table.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/game_words/result_table.html.erb:16
+  Rendered game_words/result_table.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1072)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 8216)
+Completed 200 OK in 31ms (Views: 24.1ms | ActiveRecord: 0.7ms | Allocations: 10839)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-01-23 05:52:36 +0300
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 3569)
+
+
+Started GET "/" for ::1 at 2023-01-23 05:52:36 +0300
+Processing by StaticPagesController#landing_page as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.8ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7396)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 8519)
+
+
+Started GET "/result_table" for ::1 at 2023-01-23 05:52:38 +0300
+Processing by GameWordsController#result_table as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 593)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:52:38 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 994)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 4612)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 11033)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 13288)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 05:52:41 +0300
+Processing by GameWordsController#input as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 647)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:52:41 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1279)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 7461)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 8509)
+
+
+Started GET "/" for ::1 at 2023-01-23 05:52:42 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 6709)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 7046)
+
+
+Started GET "/result_table" for ::1 at 2023-01-23 05:52:56 +0300
+Processing by GameWordsController#result_table as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 580)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:52:56 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 7445)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 8442)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-01-23 05:52:58 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 758)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 05:53:02 +0300
+Processing by GameWordsController#input as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 582)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:53:02 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 7445)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 8436)
+
+
+Started GET "/" for ::1 at 2023-01-23 05:53:04 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6710)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 7036)
+
+
+Started GET "/result_table" for ::1 at 2023-01-23 05:53:06 +0300
+Processing by GameWordsController#result_table as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 580)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:53:06 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 7445)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 8442)
+
+
+Started GET "/" for ::1 at 2023-01-23 05:53:08 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 6702)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 7028)
+
+
+Started GET "/result_table" for ::1 at 2023-01-23 05:53:09 +0300
+Processing by GameWordsController#result_table as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 584)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:53:09 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7445)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 8437)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:53:12 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 7443)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 8418)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 05:53:53 +0300
+Processing by GameWordsController#input as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 586)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:53:53 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 7445)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 8430)
+
+
+Started GET "/" for ::1 at 2023-01-23 05:53:54 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 6704)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 7030)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 05:54:19 +0300
+Processing by GameWordsController#input as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 580)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:54:19 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 7445)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 8445)
+
+
+Started GET "/result_table" for ::1 at 2023-01-23 05:54:21 +0300
+Processing by GameWordsController#result_table as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 592)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:54:21 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 7456)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 8446)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-01-23 05:54:38 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 258)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 255)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2655)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 9082)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 10858)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:54:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1270)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7447)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 8509)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-01-23 05:54:42 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 7485)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 8390)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:54:46 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 7443)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 8422)
+
+
+Started GET "/dashboard" for ::1 at 2023-01-23 05:54:58 +0300
+Processing by GameWordsController#input as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 584)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-01-23 05:54:58 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 138)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 7446)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 8449)
+
+
+Started GET "/" for ::1 at 2023-01-23 05:54:59 +0300
+Processing by StaticPagesController#landing_page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  Rendered static_pages/landing_page.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6714)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 7043)
+
+
