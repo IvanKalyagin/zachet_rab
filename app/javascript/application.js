@@ -5,3 +5,6 @@ document.ondragstart = noselect;
 document.onselectstart = noselect;
 document.oncontextmenu = noselect;
 function noselect() {return false;}
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets

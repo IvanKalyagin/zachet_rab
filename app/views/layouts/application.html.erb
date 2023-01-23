@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zachet</title>
+    <title>Game Words</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,21 +10,38 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <header>
-    <%= link_to "Home", root_path%>
-    <%= link_to "Game", dashboard_path%>
-    <% if current_user %>
-      <%= link_to "Progress", progress_path%>
-      Account: <%= current_user.email %>
-      <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
-    <% else %>
-      <%= link_to "Registration", new_user_registration_path %>
-      <%= link_to "Log in", new_user_session_path %>
-    <% end %>
-  </header>
+
   <body>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <nav class="navbar navbar-expand-lg navbar-dark", style="background-color: #4d2600;">
+      <div class="container-fluid" >
+        <%= link_to "Home", root_path, class: "navbar-brand" %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <%= link_to "Game", dashboard_path, class: "navbar-brand"%>
+        </div>
+        <div style="color: #f9ffe6;">
+          <% if current_user %>
+            <%= link_to "Progress", progress_path, class: "navbar-brand"%>
+            Account: <%= current_user.email %>
+            <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "navbar-brand" %>
+          <% else %>
+            <%= link_to "Registration", new_user_registration_path, class: "navbar-brand" %>
+            <%= link_to "Log in", new_user_session_path, class: "navbar-brand" %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+    <div class="container main" style="background-color: #fff7e6">
+      <div class="row">
+        <div class="col-md-12">
+        <h3 class="cent">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </h3>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="background-color: #fff7e6">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,14 +1,14 @@
 <div class="pos">
   <div class="main_content">
-    <h1 class="content-title">Your progress 📈</h1>
+    <h1 class="cent">Your progress 📈</h1>
 
-    <div class="progress">
-        <table class="table_users_1">
+    <div class="col-auto">
+        <table class="table">
           <tbody>
             <tr>
-              <td>№</td>
-              <td>Date</td>
-              <td>Symbols per minute</td>
+              <th>№</th>
+              <th>Date</th>
+              <th>Symbols per minute</th>
             </tr>
             <% list_users = Action.all %>
             <% index = 0 %>
@@ -25,13 +25,14 @@
         </table>
       </div>
     </div>
-    <div class="progress">
-        <table class="table_users_1">
+    <br/>
+    <div class="col-auto">
+        <table class="table">
           <tbody>
             <tr>
-              <td>№</td>
-              <td>Date</td>
-              <td>Time</td>
+              <th>№</th>
+              <th>Date</th>
+              <th>Time</th>
             </tr>
             <% list_users = ActionTime.all %>
             <% index = 0 %>

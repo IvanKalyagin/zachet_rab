@@ -45,7 +45,7 @@ class GameWordsController < ApplicationController
         @@text_globe = @@text_mode
       elsif @@game_mode == 2 then
         s = ''
-        (0..50).each {|i|
+        (0..20).each {|i|
           s = s + @@text_mode[rand(@@text_mode.length - 1)] + ' '
         }
         @@text_globe = s

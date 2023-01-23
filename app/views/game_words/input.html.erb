@@ -1,17 +1,47 @@
-<h1>GameWords#input</h1>
-<p>Find me in app/views/game_words/input.html.erb</p>
+<h1 class="cent">Game Words</h1>
+<br/>
+<br/>
+<br/>
 <div id='start-container'>
-  <%= form_with url: start_game_path do |form| %>
-  <%= form.select :lang, ["English", "Русский"] %> 
-  <input type="radio" id="dl1" name="dl" value="Text" />
-  <label>Text&nbsp&nbsp&nbsp</label>
-  <input type="radio" id="dl2" name="dl" value="60_sec" />
-  <label>60 sec&nbsp&nbsp&nbsp</label>
-  <input type="radio" id="dl3" name="dl" value="Sentence" />
-  <label>Sentence&nbsp&nbsp&nbsp</label>
-  <%= form.submit("Begin", id: 'begin-button') %>
-  <% end %> 
+  <h2 class="cent">Rules</h2>
+  <br/>
+  <br/>
+  <h4>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbspYou have 3 game mods to choose: <br/>
+    <br/>
+    <ul>
+      <li>Text — text always the same, so in this mode you can check your best time</li>
+      <br/>
+      <li>Words — in this mode, you should write some random words, so you can check your WPM</li>
+      <br/>
+      <li>Sentence — in this mode, you should write some random sentence, so you can check your WPM</li>
+    </ul>
+    <br/>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbspYou should choose language which will you write
+    <br/>
+    <br/>
+  </h4>
+  <h3 class="cent">Good luck!</h3>
+  <br/>
+  <div class="cent">
+    <h5>
+    <%= form_with url: start_game_path do |form| %>
+    <%= form.select :lang, ["English", "Русский"] %> 
+    <br/>
+    <br/>
+    <input type="radio" id="dl1" name="dl" value="Text" />
+    <label>Text&nbsp&nbsp&nbsp</label>
+    <input type="radio" id="dl2" name="dl" value="60_sec" />
+    <label>Words&nbsp&nbsp&nbsp</label>
+    <input type="radio" id="dl3" name="dl" value="Sentence" />
+    <label>Sentence&nbsp&nbsp&nbsp</label>
+    </h5>
+    <br/>
+    <br/>
+    <%= form.submit("Begin", id: 'begin-button', class: "btn btn-warning btn-lg") %>
+    <% end %> 
+  </div>
 </div>
-<div id='start-error'></div>
-<p><%= @time_now %>
+<br/>
+<br/>
 <div id='result-container'></div>
