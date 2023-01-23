@@ -1,7 +1,11 @@
 <% if @start_mes != 'You should choose game mod' then%>
-  <h4>
-  <p class="noselect"> <%= @text_game %> </p>
-  </h4>
+  <div class = "container", style="background-color: #e6ffff;">
+    <br/>
+    <h4>
+    <p class="noselect"> <%= @text_game %> </p>
+    </h4>
+    <br/>
+  </div>
   <div class="cent">
     <%= form_with url: result_path do |form| %>
     <div class='form-group'>
@@ -14,13 +18,38 @@
   </div>
 <%else%>
   <div class="cent">
-    <h3>
-    <%= @start_mes%>
-    </h3>
+    <div>
+      <h3>
+      <%= @start_mes%>
+      </h3>
+      <br/>
+      <br/>
+      <h5>
+      <%= link_to "Repeat", dashboard_path%>
+      </h5>
+    <div>
     <br/>
     <br/>
-    <h5>
-    <%= link_to "Repeat", dashboard_path%>
-    </h5>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
   </div>
 <% end %>

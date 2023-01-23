@@ -70,6 +70,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "webdrivers"
+  gem 'faker'
 end
 
 gem 'devise'
@@ -77,4 +78,3 @@ gem 'timers'
 gem 'chartkick'
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
-gem 'faker'

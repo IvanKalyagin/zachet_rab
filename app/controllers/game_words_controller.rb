@@ -3,12 +3,14 @@ class GameWordsController < ApplicationController
   @@time_start = 0
   @@time_current = 0
   @@game_mode = 0
+  @@flag = 0
+
   def input
-    @@time_current = Time.now
     @time_now = Time.now - @@time_start
   end
 
   def start_game
+    @@flag = -1
     @start_mes = ""
     dl = params[:dl]
     lang = params[:lang]
@@ -65,6 +67,7 @@ class GameWordsController < ApplicationController
     @res = ''
     if @@game_mode == 1 then
       if input_text != nil then
+        @@flag = 1
         @time_end = Time.now
         @del_time = @time_end - @@time_start
         @inp_l = input_text.length
@@ -95,6 +98,7 @@ class GameWordsController < ApplicationController
       end
     elsif @@game_mode == 2 then
       if input_text != nil then
+        @@flag = 1
         @time_end = Time.now
         @del_time = @time_end - @@time_start
         @inp_l = input_text.length
@@ -122,6 +126,7 @@ class GameWordsController < ApplicationController
       end
     elsif @@game_mode == 3 then
       if input_text != nil then
+        @@flag = 1
         @time_end = Time.now
         @del_time = @time_end - @@time_start
         @inp_l = input_text.length
