@@ -1,70 +1,180 @@
 <div class="pos">
   <div class="main_content">
     <h1 class="cent">Your progress 📈</h1>
-
-    <div class="col-auto">
-        <table class="table">
-          <tbody>
-            <tr>
-              <th>№</th>
-              <th>Date</th>
-              <th>Symbols per minute</th>
-            </tr>
-            <% list_users = Action.all %>
-            <% index = 0 %>
-            <% list_users.length.times do |i| %>
-              <% if list_users[i].user_id == current_user.id %>
-                <tr>
-                  <td><%= index += 1 %></td>
-                  <td><%= list_users[i].created_at %></td>
-                  <td><%= list_users[i].gen_results %></td>
-                </tr>
+    <br/>
+    <% prog_prov = User.find(current_user.id) %>
+    <% if prog_prov.time_best == 0.0 then%>
+      <% if prog_prov.statistics == 0 then %>
+        <br/>
+        <br/>
+        <h4 class="cent">You haven't played any game yet!</h4>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      <% else %>
+        <br/>
+        <h4 class="cent">You haven't played text mode yet!<h4>
+        <br/>
+        <br/>
+        <div class="col-auto">
+          <table class="table table-hover", style="background-color: #e6ffff;">
+            <tbody>
+              <tr>
+                <th>№</th>
+                <th>Date</th>
+                <th>Symbols per minute</th>
+              </tr>
+              <% list_users = Action.all %>
+              <% index = 0 %>
+              <% list_users.length.times do |i| %>
+                <% if list_users[i].user_id == current_user.id %>
+                  <tr>
+                    <td><%= index += 1 %></td>
+                    <td><%= list_users[i].created_at %></td>
+                    <td><%= list_users[i].gen_results %></td>
+                  </tr>
+                <% end %>
               <% end %>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <br/>
-    <div class="col-auto">
-        <table class="table">
-          <tbody>
-            <tr>
-              <th>№</th>
-              <th>Date</th>
-              <th>Time</th>
-            </tr>
-            <% list_users = ActionTime.all %>
-            <% index = 0 %>
-            <% list_users.length.times do |i| %>
-              <% if list_users[i].user_id == current_user.id %>
-                <tr>
-                  <td><%= index += 1 %></td>
-                  <td><%= list_users[i].created_at %></td>
-                  <td><%= list_users[i].gen_time %></td>
-                </tr>
+            </tbody>
+          </table>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      <% end %>
+    <% else %>
+      <% if prog_prov.statistics == 0 then %>
+        <br/>
+        <h4 class="cent">You haven't played sentence or words mode yet!<h4>
+        <br/>
+        <br/>
+        <div class="col-auto">
+          <table class="table table-hover", style="background-color: #e6ffff;">
+            <tbody>
+              <tr>
+                <th>№</th>
+                <th>Date</th>
+                <th>Time</th>
+              </tr>
+              <% list_users = ActionTime.all %>
+              <% index = 0 %>
+              <% list_users.length.times do |i| %>
+                <% if list_users[i].user_id == current_user.id %>
+                  <tr>
+                    <td><%= index += 1 %></td>
+                    <td><%= list_users[i].created_at %></td>
+                    <td><%= list_users[i].gen_time %></td>
+                  </tr>
+                <% end %>
               <% end %>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+            </tbody>
+          </table>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      <% else %>
+        <br/>
+        <h4 class="cent">It's all your progress!<h4>
+        <br/>
+        <br/>
+        <div class="col-auto">
+          <table class="table table-hover", style="background-color: #e6ffff;">
+            <tbody>
+              <tr>
+                <th>№</th>
+                <th>Date</th>
+                <th>Symbols per minute</th>
+              </tr>
+              <% list_users = Action.all %>
+              <% index = 0 %>
+              <% list_users.length.times do |i| %>
+                <% if list_users[i].user_id == current_user.id %>
+                  <tr>
+                    <td><%= index += 1 %></td>
+                    <td><%= list_users[i].created_at %></td>
+                    <td><%= list_users[i].gen_results %></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <br/>
+        <div class="col-auto">
+          <table class="table table-hover", style="background-color: #e6ffff;">
+            <tbody>
+              <tr>
+                <th>№</th>
+                <th>Date</th>
+                <th>Time</th>
+              </tr>
+              <% list_users = ActionTime.all %>
+              <% index = 0 %>
+              <% list_users.length.times do |i| %>
+                <% if list_users[i].user_id == current_user.id %>
+                  <tr>
+                    <td><%= index += 1 %></td>
+                    <td><%= list_users[i].created_at %></td>
+                    <td><%= list_users[i].gen_time %></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      <% end %>
+    <% end %>
     <br/>
   </div>
 </div>
